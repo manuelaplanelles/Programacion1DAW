@@ -1,0 +1,46 @@
+@startuml DiagramaPistaDeportiva
+
+enum Techado {
+    INDOOR
+    EXTERIOR
+}
+
+enum Superficie {
+    TIERRA_BATIDA
+    CEMENTO
+    HIERBA
+}
+
+enum Paredes {
+    CRISTAL
+    CEMENTO
+}
+
+abstract class Pista {
+    - String identificador
+    - Techado techado
+}
+
+class Tenis {
+    - Superficie superficie
+}
+
+class Padel {
+    - Paredes paredes
+}
+
+class Usuario {
+    - String nombre
+    - int id
+}
+
+class Reserva {
+    - LocalDateTime fechaHora
+}
+
+Pista <|-- Tenis
+Pista <|-- Padel
+Reserva --> Usuario
+Reserva --> Pista
+
+@enduml
