@@ -1,4 +1,4 @@
-package org.example.ra90_proyectos_integradores.practicas.SistemaModernizacionMutxamel;
+package org.example.P15_SistemaModernizacionMutxamel;
 
 public interface FuncionesIntegrantes {
         void concentrarse();

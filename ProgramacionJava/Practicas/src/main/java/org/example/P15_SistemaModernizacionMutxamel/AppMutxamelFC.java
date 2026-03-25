@@ -1,4 +1,4 @@
-package org.example.ra90_proyectos_integradores.practicas.SistemaModernizacionMutxamel;
+package org.example.P15_SistemaModernizacionMutxamel;
 
 import java.util.ArrayList;
 

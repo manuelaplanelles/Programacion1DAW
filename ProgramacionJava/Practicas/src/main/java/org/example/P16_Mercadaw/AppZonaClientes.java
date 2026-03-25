@@ -14,6 +14,7 @@ public class AppZonaClientes {
     }
     static public void autenticacion(List<Cliente> clientes){
         System.out.println("*** COMPRA ONLINE DE MERCADAW ***");
+        boolean encontrado = false;
         for (int intentos = 0; intentos < 3; intentos++) {
 
             System.out.println("Usuario:");
@@ -21,15 +22,24 @@ public class AppZonaClientes {
             System.out.println("Contraseña:");
             String contrasenyaIntroducido = teclado.next();
 
-            for (Cliente cliente : clientes) {
-                if (cliente.getUsuario().equals(usuarioIntroducido) && cliente.getContrasenya().equals(contrasenyaIntroducido)) {
-                    System.out.println("Usuaria y contraseña correctas.");
+            for (Cliente clienteActual : clientes) {
+                if (clienteActual.getUsuario().equals(usuarioIntroducido) && clienteActual.getContrasenya().equals(contrasenyaIntroducido)) {
+                    encontrado= true;
                     iniciarCompra();
+                    cliente=clienteActual;
                 }
             }
-            System.out.println("Algo no coincide o no existe! Vuelve a intentarlo...");
+            if (encontrado) {
+                System.out.println("Usuario y contraseña correctas.");
+                iniciarCompra();
+                break;
+            } else {
+                System.out.println("Algo no coincide o no existe! Vuelve a intentarlo...");
+            }
         }
-        System.out.println("ERROR DE AUTENTICACIÓN.");
+        if (!encontrado) {
+            System.out.println("ERROR DE AUTENTICACIÓN.");
+        }
     }
     static public void iniciarCompra(){
 

@@ -1,4 +1,4 @@
-package org.example.ra90_proyectos_integradores.practicas.SistemaPagoECommerce;
+package org.example.P14_SistemaPagoECommerce;
 
 /**
  * Clase abstracta que representa un método de pago genérico
