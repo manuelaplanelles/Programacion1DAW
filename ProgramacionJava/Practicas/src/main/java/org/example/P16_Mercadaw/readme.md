@@ -1,4 +1,6 @@
 <p align="center">
+  <img src="img/banner1.png" width="100%">
+</p>
 <h1 align="center"> Práctica: Servicio de compra online en MERCADAW </h1>
 <h2 align="center"> Manuela Planelles - 1º DAW - IES Mutxamel</h2>
 
