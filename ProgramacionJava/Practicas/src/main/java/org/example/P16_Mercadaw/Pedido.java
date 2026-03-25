@@ -15,18 +15,21 @@ public class Pedido {
 
 
     public void aplicarPromo3x2() {
-        for (Map.Entry<Producto, Integer> entry : pedido.entrySet()){
-            int uds = entry.getValue();
-            if (uds >= 3){
-                int grupos = uds/3;
-                double ahorro = grupos * entry.getKey().getPrecio();
-                importe_total -= ahorro;
+        for (Map.Entry<Producto, Integer> entry : pedido.entrySet()) {
+            Producto producto = entry.getKey();
+            int cantidad = entry.getValue();
+
+            if (cantidad % 3 == 0) {
+                int unidadesGratis = cantidad / 3;
+                double descuento = unidadesGratis * producto.getPrecio();
+                importe_total = importe_total - descuento;
             }
         }
     }
 
     public void aplicarPromo10() {
-        importe_total = importe_total * 0.90;
+        double descuento = importe_total * 0.10;
+        importe_total = importe_total - descuento;
     }
 
     public void mostrarResumen() {
