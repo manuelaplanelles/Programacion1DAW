@@ -104,17 +104,6 @@ public void aplicarPromo10() {
 }
 ```
 
-Para mostrar el resumen ordenado por unidades descendentemente convierto el entrySet a una lista y la ordeno con un Comparator:
-
-```java
-public void mostrarResumenOrdenado() {
-    List<Map.Entry<Producto, Integer>> lista = new ArrayList<>(pedido.entrySet());
-    lista.sort((e1, e2) -> e2.getValue() - e1.getValue());
-    for (Map.Entry<Producto, Integer> entry : lista) {
-        System.out.println(entry.getValue() + " " + entry.getKey() + "\t" + entry.getKey().getPrecio());
-    }
-}
-```
 
 ---
 
@@ -126,16 +115,7 @@ El método `insertarProducto(String nombreProducto)` usa `Producto.valueOf()` pa
 
 ```java
 public void insertarProducto(String nombreProducto) {
-    try {
-        Producto p = Producto.valueOf(nombreProducto.toUpperCase());
-        if (pedido.getPedido().containsKey(p)) {
-            pedido.getPedido().put(p, pedido.getPedido().get(p) + 1);
-        } else {
-            pedido.getPedido().put(p, 1);
-        }
-    } catch (IllegalArgumentException e) {
-        System.out.println("El producto no existe! Elige otro.");
-    }
+
 }
 ```
 
@@ -147,17 +127,7 @@ Genera 3 clientes aleatorios en `generarClientes()`. El usuario y contraseña de
 
 ```java
 public static void generarClientes() {
-    String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    Random random = new Random();
-    for (int i = 0; i < 3; i++) {
-        StringBuilder usuario = new StringBuilder();
-        StringBuilder contraseña = new StringBuilder();
-        for (int j = 0; j < 8; j++) {
-            usuario.append(caracteres.charAt(random.nextInt(caracteres.length())));
-            contraseña.append(caracteres.charAt(random.nextInt(caracteres.length())));
-        }
-        clientes.add(new Cliente(usuario.toString(), contraseña.toString()));
-    }
+   
 }
 ```
 
