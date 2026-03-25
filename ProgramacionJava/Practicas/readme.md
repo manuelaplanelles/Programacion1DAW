@@ -23,3 +23,4 @@ Ejercicios y proyectos del curso ordenados por entrega.
 | P14 | [Sistema Pago E-Commerce](./src/main/java/org/example/P14_SistemaPagoECommerce) | Interfaces, polimorfismo |
 | P15 | [Sistema Modernización Mutxamel FC](./src/main/java/org/example/P15_SistemaModernizacionMutxamel) | Proyecto modular completo |
 | P16 | [Mercadaw](./src/main/java/org/example/P16_Mercadaw) | Gestión de clientes y productos |
+| PNav | [¿Acaso hubo búhos acá?](https://github.com/manuelaplanelles/PracticaNavidad-Programacion.git) |  | ⧉ repo externo |
