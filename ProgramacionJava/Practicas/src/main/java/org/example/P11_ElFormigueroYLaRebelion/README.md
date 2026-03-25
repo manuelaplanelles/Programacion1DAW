@@ -1,8 +1,9 @@
-![Banner](/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/banner.png)
 
-# Práctica 1. "El Formiguero" y "La Rebelión"
-
-Manuela Planelles - 1º DAW - IES Mutxamel
+<p align="center">
+  <img src="img_doc/banner.png" alt="Learning Curve Banner" width="100%">
+</p>
+<h1 align="center"> Práctica 1. "El Formiguero" y "La Rebelión" </h1>
+<h2 align="center"> Manuela Planelles - 1º DAW - IES Mutxamel</h2>
 
 ---
 
@@ -13,10 +14,10 @@ Manuela Planelles - 1º DAW - IES Mutxamel
 3. [Diseño e Implementación del programa.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#3-dise%C3%B1o-e-implementaci%C3%B3n-del-programa)
    - [3.1. Estructura de clases](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#31-estructura-de-clases)
      - [3.1.1. Clase `AppProgramas`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-appprogramas)
-     - [3.1.4. Clase `Empleado`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-empleado)
-     - [3.1.5. Clase `Invitado`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-invitado)
-     - [3.1.2. Clase `Cadena`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-cadena)
-     - [3.1.3. Clase `Programa`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-programa)
+     - [3.1.2. Clase `Empleado`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-empleado)
+     - [3.1.3. Clase `Invitado`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-invitado)
+     - [3.1.4. Clase `Cadena`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-cadena)
+     - [3.1.5. Clase `Programa`](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#clase-programa)
    - [3.2. Métodos extras implementados.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#32-m%C3%A9todos-extras-implementados)
 4. [Relaciones entre clases](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#4-relaciones-entre-clases)
 5. [Ejemplo de funcionamiento](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#5-ejemplo-de-funcionamiento)
@@ -24,7 +25,9 @@ Manuela Planelles - 1º DAW - IES Mutxamel
    - [6.1. Pruebas final feliz.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#61-pruebas-final-feliz)
    - [6.2. Pruebas con JUnit5.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#62-pruebas-con-junit5)
 7. [Documentación Javadoc](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#7-documentaci%C3%B3n-javadoc)
-8. [Diagrama UML:** Crear el diagrama UML con PlantUML.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#8-diagrama-uml-crear-el-diagrama-uml-con-plantuml)
+8. [Diagrama UML.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#8-diagrama-uml)
+9. [Conclusión.](https://github.com/manuelaplanelles/1Daw/blob/main/javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/README.md#9-conclusi%C3%B3n)
+    
 
 ---
 
@@ -56,7 +59,7 @@ La práctica persigue los siguientes objetivos:
 
 Creamos las clases que se solicitan con sus atributos.
 
-![Clases y atributos](../../../../../../../javabasico/src/main/java/practicas/ElFormigueroYLaRebelion/img_doc/clases%20y%20atributos.jpg)
+![Clases y atributos](./img_doc/clases%20y%20atributos.jpg)
 
 ---
 #### Clase AppProgramas
@@ -722,15 +725,15 @@ if (fecha1.isBefore(fecha2)) {
 ## 5. Ejemplo de funcionamiento
 
 ##### 1. Comprobamos la lista de empleados, un empleado no puede ser director, y si no es ningún de los valores se guarda como pte
-  ![Prueba Empleado](../../../../../../../../../java%20copia/Java/programacion1Daw/src/main/java/org/proyectosPracticas/ElFormigueroYLaRebelion/img_doc/pruebas_empleado.jpg)
+  ![Prueba Empleado](./img_doc/pruebas_empleado.jpg)
 ##### 2. Comprobamos que se crea sin problema Invitado
-  ![Prueba Invitado](../../../../../../../../../java%20copia/Java/programacion1Daw/src/main/java/org/proyectosPracticas/ElFormigueroYLaRebelion/img_doc/prueba_invitado.png)
+  ![Prueba Invitado](./img_doc/prueba_invitado.png)
 
 ##### 3. Comprobamos sobre la clase Cadena
-  ![Prueba Cadena](../../../../../../../../../java%20copia/Java/programacion1Daw/src/main/java/org/proyectosPracticas/ElFormigueroYLaRebelion/img_doc/pruebas_cadena.jpg)
+  ![Prueba Cadena](./img_doc/pruebas_cadena.jpg)
 
 ##### 4. Comprobamos sobre la clase Programa, la gestion de los empleados
-  ![Prueba Programa](../../../../../../../../../java%20copia/Java/programacion1Daw/src/main/java/org/proyectosPracticas/ElFormigueroYLaRebelion/img_doc/pruebas_programa.jpg)
+  ![Prueba Programa](./img_doc/pruebas_programa.jpg)
 
 
 ---
@@ -759,7 +762,7 @@ public class AppProgramas {
     }
 }
 ```
-![Salida esperada](../../../../../../../../../java%20copia/Java/programacion1Daw/src/main/java/org/proyectosPracticas/ElFormigueroYLaRebelion/img_doc/salida.jpg)
+![Salida esperada](./img_doc/salida.jpg)
 
 ---
 ### 6.2. Pruebas con JUnit5.
@@ -824,7 +827,7 @@ class CadenaTest {
 ```
 </details>
 
-![Resultado](../../../../../../../../../java%20copia/Java/programacion1Daw/src/main/java/org/proyectosPracticas/ElFormigueroYLaRebelion/img_doc/cadenaTest.jpg)
+![Resultado](./img_doc/cadenaTest.jpg)
 
 
 ProgramaTest
@@ -921,7 +924,7 @@ class ProgramaTest {
 ```
 </details>
 
-![Resultado](../../../../../../../../../java%20copia/Java/programacion1Daw/src/main/java/org/proyectosPracticas/ElFormigueroYLaRebelion/img_doc/programaTest.jpg)
+![Resultado](./img_doc/programaTest.jpg)
 
 EmpleadoTest
 <details>
@@ -1001,7 +1004,7 @@ class EmpleadoTest {
 ```
 </details>
 
-![Resultado](../../../../../../../../../java%20copia/Java/programacion1Daw/src/main/java/org/proyectosPracticas/ElFormigueroYLaRebelion/img_doc/empleadoTest.jpg)
+![Resultado](./img_doc/empleadoTest.jpg)
 
 InvitadoTest
 - El constructor de Invitado pide datos por consola con Scanner, lo cual NO SE PUEDE TESTEAR en JUnit.
@@ -1021,14 +1024,225 @@ InvitadoTest
 
 - Se adjunta en la misma carpeta del proyecto los zip la documentacion de JavaDoc.
    
-![JavaDoc](../../../../../../../../../java%20copia/Java/programacion1Daw/src/main/java/org/proyectosPracticas/ElFormigueroYLaRebelion/img_doc/JavaDoc.jpg)
+![JavaDoc](./img_doc/JavaDoc.jpg)
 
 
 ---
+
 ## 8. Diagrama UML:
-- Crear el diagrama UML con PlantUML.
+- Solicitamos a ChartGPT que nos cree un codigo de un diagrama de relación entre varias clases parea PlantUML.
+
+    ![Diagrama](./img_doc/diagrama_clases.png)
+
+  
+<details>
+<summary>Ver el código para PlantUML</summary>
+
+```java
+@startuml
+
+!define RECTANGLE class
+
+skinparam backgroundColor #FEFEFE
+skinparam classAttributeIconSize 0
+
+' Colores personalizados para cada clase
+skinparam class {
+    BackgroundColor<<Cadena>> #E3F2FD
+    BorderColor<<Cadena>> #1976D2
+    
+    BackgroundColor<<Programa>> #F3E5F5
+    BorderColor<<Programa>> #7B1FA2
+    
+    BackgroundColor<<Empleado>> #E8F5E9
+    BorderColor<<Empleado>> #388E3C
+    
+    BackgroundColor<<Invitado>> #FFF3E0
+    BorderColor<<Invitado>> #F57C00
+}
+
+' Clase Cadena
+class Cadena <<Cadena>> {
+    - nombre: String
+    - listaPrograma: ArrayList<Programa>
+    
+    + Cadena(nombre: String)
+    + agregarPrograma(programa: Programa): void
+    + eliminarPrograma(programa: Programa): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getListaPrograma(): ArrayList<Programa>
+    + setListaPrograma(listaPrograma: ArrayList<Programa>): void
+    + toString(): String
+}
+
+' Clase Programa
+class Programa <<Programa>> {
+    - nombre: String
+    - cadena: Cadena
+    - temporadas: int
+    - listaEmpleado: ArrayList<Empleado>
+    - listaInvitado: ArrayList<Invitado>
+    - director: Empleado
+    
+    + Programa(nombre: String, cadena: Cadena, nombreDirector: String)
+    + añadirEmpleado(nombre: String, cargo: String, director: Empleado): void
+    + eliminarEmpleado(empleado: Empleado): void
+    + añadirInvitado(nombre: String, profesion: String, temporada: int): void
+    + eliminarInvitado(invitado: Invitado): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getCadena(): Cadena
+    + setCadena(cadena: Cadena): void
+    + invitadosTemporada(temporada: int): void
+    + vecesInvitado(nombre: String): int
+    + rastrearInvitado(nombre: String): void
+    + buscarInvitado(nombre: String): boolean
+    + getTemporadas(): int
+    + setTemporadas(temporadas: int): void
+    + getListaEmpleado(): ArrayList<Empleado>
+    + setListaEmpleado(listaEmpleado: ArrayList<Empleado>): void
+    + getListaInvitado(): ArrayList<Invitado>
+    + setListaInvitado(listaInvitado: ArrayList<Invitado>): void
+    + getDirector(): Empleado
+    + setDirector(director: Empleado): void
+    + toString(): String
+}
+
+' Clase Empleado
+class Empleado <<Empleado>> {
+    - {static} contadorId: int
+    - id: String
+    - nombre: String
+    - cargo: String
+    - director: Empleado
+    
+    - generarId(): String
+    + Empleado(nombre: String, cargo: String, director: Empleado)
+    + {static} getContadorId(): int
+    + {static} setContadorId(contadorId: int): void
+    + getId(): String
+    + setId(id: String): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getCargo(): String
+    + setCargo(cargo: String): void
+    + getDirector(): Empleado
+    + setDirector(director: Empleado): void
+    + toString(): String
+}
+
+' Clase Invitado
+class Invitado <<Invitado>> {
+    - nombre: String
+    - profesion: String
+    - fecha_visita: LocalDate
+    - temporada: int
+    
+    + Invitado(nombre: String, profesion: String, temporada: int)
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getProfesion(): String
+    + setProfesion(profesion: String): void
+    + getFecha_visita(): LocalDate
+    + setFecha_visita(fecha_visita: LocalDate): void
+    + getTemporada(): int
+    + setTemporada(temporada: int): void
+    + toString(): String
+}
+
+' Relaciones
+
+' Cadena <-> Programa: Asociación/Agregación bidireccional
+Cadena "1" o-- "0..*" Programa : agregación\nbidireccional >
+Programa --> Cadena
+
+' Programa <-> Empleado: Composición (el director se crea en Programa)
+Programa *-- "1..*" Empleado : composición >
+note on link
+  El director se crea 
+  automáticamente en 
+  el constructor de 
+  Programa
+end note
+
+' Programa <-> Invitado: Composición
+Programa *-- "0..*" Invitado : composición >
+
+' Empleado auto-referencia (jerarquía)
+Empleado --> "0..1" Empleado : director >
+
+' Notas explicativas
+note right of Cadena::listaPrograma
+  Por defecto se crea 
+  vacía y se van 
+  agregando programas
+end note
+
+note right of Programa::director
+  Se crea automáticamente 
+  en el constructor y se 
+  añade a listaEmpleado
+end note
+
+note right of Programa::listaEmpleado
+  Por defecto: 0 empleados 
+  excepto el director
+end note
+
+note right of Programa::listaInvitado
+  Por defecto: 0 invitados 
+  hasta que se añadan
+end note
+
+note right of Empleado::id
+  Autogenerado: 
+  EP001, EP002...
+end note
+
+note right of Empleado::cargo
+  Valores válidos:
+  director, técnico,
+  presentador, colaborador.
+  Si no: "pte"
+end note
+
+note right of Empleado::director
+  Si cargo es "director"
+  → null
+end note
+
+note right of Invitado::fecha_visita
+  Se solicita por teclado 
+  en el constructor
+end note
+
+title Diagrama de Clases - El Formiguero y La Rebelión\n@author Manuela Planelles Lucas | @version 1.0
+
+@enduml
+```
+
+</details>
 
 ---
+
+## 9. Conclusión.
+
+Al principio, el planteamiento parecía sencillo: crear unas clases, añadir algunos atributos y métodos, y listo. Pero la realidad fue bastante diferente. La clave estuvo en seguir el PDF al pie de la letra, sin intentar adelantarme al resto del pdf, esto hacia  que fuese más "facil" de construir.
+
+Las dificultades fueron los metodos extras, la comparacion de fechas, el rastreo de invitados,... esos les he dado muchas vueltas y buscado y comparado con otros, y empezaba a entender como desarrollarlos, pero no terminaba de cuadrar correctamente y tuve que consultar con la ia, evite que me dise la respuesta, sino más bien que me explicase y ayudase a entender y que me dise ejemplos similares. 
+
+Tambien tube algunas dificultades con cosas tan sencillas como editar el toString (no entendia del todo que era lo que pedias, esta clase me la salte).
+
+Sobre la documentacion, JavaDoc no tuve ningun problema, igual que en el diagrama, pero en JUnit5 si que tire de ia, ya en su dia no supe como realizar las pruebas, y mirando los apuntes no salia como esperaba (practicare para las proximas entregas o las que tengo pendiente).
+
+Esta practica me ayudado a comprender mas la estructura de objeta y la relacion, practicar algunos metodos o enlazarlos, esta claro que necesito practicar mucho más para conseguir una autonomia completa, pero con la practica estoy algo mas cerca.
+
+Y sí, las IAs pueden ayudar mucho en el camino, pero solo si sabemos qué preguntar y cómo aplicar las respuestas, y la intención que tengas con ella. Al final, el código lo escribo, y la responsabilidad de entenderlo es mia.
+
+---
+
+
 
 
 

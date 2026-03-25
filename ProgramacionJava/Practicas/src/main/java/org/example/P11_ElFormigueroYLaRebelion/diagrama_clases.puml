@@ -1,0 +1,181 @@
+@startuml
+
+!define RECTANGLE class
+
+skinparam backgroundColor #FEFEFE
+skinparam classAttributeIconSize 0
+
+' Colores personalizados para cada clase
+skinparam class {
+    BackgroundColor<<Cadena>> #E3F2FD
+    BorderColor<<Cadena>> #1976D2
+
+    BackgroundColor<<Programa>> #F3E5F5
+    BorderColor<<Programa>> #7B1FA2
+
+    BackgroundColor<<Empleado>> #E8F5E9
+    BorderColor<<Empleado>> #388E3C
+
+    BackgroundColor<<Invitado>> #FFF3E0
+    BorderColor<<Invitado>> #F57C00
+}
+
+' Clase Cadena
+class Cadena <<Cadena>> {
+    - nombre: String
+    - listaPrograma: ArrayList<Programa>
+
+    + Cadena(nombre: String)
+    + agregarPrograma(programa: Programa): void
+    + eliminarPrograma(programa: Programa): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getListaPrograma(): ArrayList<Programa>
+    + setListaPrograma(listaPrograma: ArrayList<Programa>): void
+    + toString(): String
+}
+
+' Clase Programa
+class Programa <<Programa>> {
+    - nombre: String
+    - cadena: Cadena
+    - temporadas: int
+    - listaEmpleado: ArrayList<Empleado>
+    - listaInvitado: ArrayList<Invitado>
+    - director: Empleado
+
+    + Programa(nombre: String, cadena: Cadena, nombreDirector: String)
+    + añadirEmpleado(nombre: String, cargo: String, director: Empleado): void
+    + eliminarEmpleado(empleado: Empleado): void
+    + añadirInvitado(nombre: String, profesion: String, temporada: int): void
+    + eliminarInvitado(invitado: Invitado): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getCadena(): Cadena
+    + setCadena(cadena: Cadena): void
+    + invitadosTemporada(temporada: int): void
+    + vecesInvitado(nombre: String): int
+    + rastrearInvitado(nombre: String): void
+    + buscarInvitado(nombre: String): boolean
+    + getTemporadas(): int
+    + setTemporadas(temporadas: int): void
+    + getListaEmpleado(): ArrayList<Empleado>
+    + setListaEmpleado(listaEmpleado: ArrayList<Empleado>): void
+    + getListaInvitado(): ArrayList<Invitado>
+    + setListaInvitado(listaInvitado: ArrayList<Invitado>): void
+    + getDirector(): Empleado
+    + setDirector(director: Empleado): void
+    + toString(): String
+}
+
+' Clase Empleado
+class Empleado <<Empleado>> {
+    - {static} contadorId: int
+    - id: String
+    - nombre: String
+    - cargo: String
+    - director: Empleado
+
+    - generarId(): String
+    + Empleado(nombre: String, cargo: String, director: Empleado)
+    + {static} getContadorId(): int
+    + {static} setContadorId(contadorId: int): void
+    + getId(): String
+    + setId(id: String): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getCargo(): String
+    + setCargo(cargo: String): void
+    + getDirector(): Empleado
+    + setDirector(director: Empleado): void
+    + toString(): String
+}
+
+' Clase Invitado
+class Invitado <<Invitado>> {
+    - nombre: String
+    - profesion: String
+    - fecha_visita: LocalDate
+    - temporada: int
+
+    + Invitado(nombre: String, profesion: String, temporada: int)
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getProfesion(): String
+    + setProfesion(profesion: String): void
+    + getFecha_visita(): LocalDate
+    + setFecha_visita(fecha_visita: LocalDate): void
+    + getTemporada(): int
+    + setTemporada(temporada: int): void
+    + toString(): String
+}
+
+' Relaciones
+
+' Cadena <-> Programa: Asociación/Agregación bidireccional
+Cadena "1" o-- "0..*" Programa : agregación\nbidireccional >
+Programa --> Cadena
+
+' Programa <-> Empleado: Composición (el director se crea en Programa)
+Programa *-- "1..*" Empleado : composición >
+note on link
+  El director se crea
+  automáticamente en
+  el constructor de
+  Programa
+end note
+
+' Programa <-> Invitado: Composición
+Programa *-- "0..*" Invitado : composición >
+
+' Empleado auto-referencia (jerarquía)
+Empleado --> "0..1" Empleado : director >
+
+' Notas explicativas
+note right of Cadena::listaPrograma
+  Por defecto se crea
+  vacía y se van
+  agregando programas
+end note
+
+note right of Programa::director
+  Se crea automáticamente
+  en el constructor y se
+  añade a listaEmpleado
+end note
+
+note right of Programa::listaEmpleado
+  Por defecto: 0 empleados
+  excepto el director
+end note
+
+note right of Programa::listaInvitado
+  Por defecto: 0 invitados
+  hasta que se añadan
+end note
+
+note right of Empleado::id
+  Autogenerado:
+  EP001, EP002...
+end note
+
+note right of Empleado::cargo
+  Valores válidos:
+  director, técnico,
+  presentador, colaborador.
+  Si no: "pte"
+end note
+
+note right of Empleado::director
+  Si cargo es "director"
+  → null
+end note
+
+note right of Invitado::fecha_visita
+  Se solicita por teclado
+  en el constructor
+end note
+
+title Diagrama de Clases - El Formiguero y La Rebelión\n@author Manuela Planelles Lucas | @version 1.0
+
+@enduml

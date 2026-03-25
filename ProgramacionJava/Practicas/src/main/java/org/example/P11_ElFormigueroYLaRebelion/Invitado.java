@@ -83,7 +83,7 @@ public class Invitado {
      * Obtiene la fecha de visita del invitado al programa.
      *
      * @return La fecha de visita como objeto LocalDate
-     * @see java.time.LocalDate
+     * @see LocalDate
      */
     public LocalDate getFecha_visita() {
         return fecha_visita;
