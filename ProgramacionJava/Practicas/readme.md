@@ -10,11 +10,11 @@
 2. [Objetivos de la práctica](#2-objetivos-de-la-práctica)
 3. [Diseño e Implementación del programa](#3-diseño-e-implementación-del-programa)
    - [3.1. Estructura de clases](#31-estructura-de-clases)
-     - [3.1.1. Enum `Producto`](#enum-producto)
-     - [3.1.2. Clase `Pedido`](#clase-pedido)
-     - [3.1.3. Clase `Cliente`](#clase-cliente)
-     - [3.1.4. Clase `Mercadaw`](#clase-mercadaw)
-     - [3.1.5. Clase `AppZonaClientes`](#clase-appzonaclientes)
+     - [3.1.1. Enum Producto](#enum-producto)
+     - [3.1.2. Clase Pedido](#clase-pedido)
+     - [3.1.3. Clase Cliente](#clase-cliente)
+     - [3.1.4. Clase Mercadaw](#clase-mercadaw)
+     - [3.1.5. Clase AppZonaClientes](#clase-appzonaclientes)
 4. [Ejemplo de funcionamiento](#4-ejemplo-de-funcionamiento)
 5. [Conclusión](#5-conclusión)
 
@@ -85,17 +85,20 @@ Gestiona el `HashMap<Producto, Integer>` con los productos y sus cantidades. Tie
 ```java
 public void aplicarPromo3x2() {
     for (Map.Entry<Producto, Integer> entry : pedido.entrySet()) {
-        int uds = entry.getValue();
-        if (uds >= 3) {
-            int grupos = uds / 3;
-            double ahorro = grupos * entry.getKey().getPrecio();
-            importe_total -= ahorro;
+        Producto producto = entry.getKey();
+        int cantidad = entry.getValue();
+
+        if (cantidad % 3 == 0) {
+            int unidadesGratis = cantidad / 3;        
+            double descuento = unidadesGratis * producto.getPrecio();    
+            importe_total = importe_total - descuento;
         }
     }
 }
 
 public void aplicarPromo10() {
-    importe_total = importe_total * 0.90;
+   double descuento = importe_total * 0.10;
+   importe_total = importe_total - descuento;
 }
 ```
 
