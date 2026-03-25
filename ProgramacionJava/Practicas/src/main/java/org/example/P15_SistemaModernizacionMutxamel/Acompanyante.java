@@ -1,4 +1,4 @@
-package org.example.P15_SistemaModernizacionMutxamel;
+package org.example.ra90_proyectos_integradores.practicas.SistemaModernizacionMutxamel;
 
 public class Acompanyante extends MutxamelFC {
     private Jugador integrante;

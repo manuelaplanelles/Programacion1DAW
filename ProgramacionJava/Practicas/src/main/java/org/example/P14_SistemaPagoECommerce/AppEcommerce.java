@@ -1,4 +1,4 @@
-package org.example.P14_SistemaPagoECommerce;
+package org.example.ra90_proyectos_integradores.practicas.SistemaPagoECommerce;
 
 public class AppEcommerce {
 

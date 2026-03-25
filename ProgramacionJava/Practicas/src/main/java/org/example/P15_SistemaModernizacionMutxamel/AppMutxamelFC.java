@@ -1,4 +1,4 @@
-package org.example.P15_SistemaModernizacionMutxamel;
+package org.example.ra90_proyectos_integradores.practicas.SistemaModernizacionMutxamel;
 
 import java.util.ArrayList;
 
@@ -43,39 +43,52 @@ public class AppMutxamelFC {
         m1.concentrarse();
         a1.concentrarse();
         System.out.println();
+
         j2.entrenar();
         e2.entrenar();
+
         System.out.println();
         m3.darMasaje(j6);
+
         System.out.println();
         j4.viajar("Madrid");
         e3.viajar("Madrid");
         m2.viajar("Madrid");
         a4.viajar("Madrid");
+
         System.out.println();
         e1.planificarEntrenamiento();
+
         System.out.println();
         j2.descansar();
+
         System.out.println();
         j5.calentar();
+
         System.out.println();
         j2.jugarPartido("Madrid");
         e2.jugarPartido("Madrid");
+
         System.out.println();
         a4.animarEquipo();
+
         System.out.println();
         e2.hacerCambios();
+
         System.out.println();
         j3.marcarGol();
+
         System.out.println();
         j1.celebrarGol();
         e2.celebrarGol();
         m1.celebrarGol();
         a7.celebrarGol();
+
         System.out.println();
         for (int i = 0; i < 4; i++) {
             m1.darMasaje(listaJugadores.get(i));
         }
+
         System.out.println();
         j4.viajar("Mutxamel");
         e3.viajar("Mutxamel");

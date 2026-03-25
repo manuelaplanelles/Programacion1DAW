@@ -1,4 +1,4 @@
-package org.example.P15_SistemaModernizacionMutxamel;
+package org.example.ra90_proyectos_integradores.practicas.SistemaModernizacionMutxamel;
 
 import java.util.ArrayList;
 
@@ -13,10 +13,10 @@ public class Entrenador extends MutxamelFC implements AccionesDeportivas{
     }
 
     public void planificarEntrenamiento(){
-
+        System.out.println("El entrenador " +  this.getNombre() +  " está planificando el entrenamiento con formación " + this.getFormacionPreferida());
     }
     public void hacerCambios(){
-
+        System.out.println("El entrenador " +  this.getNombre() + " está realizando cambios tácticos en el equipo "+ this.equipos);
     }
 
 
@@ -38,32 +38,31 @@ public class Entrenador extends MutxamelFC implements AccionesDeportivas{
             throw new ControlformacionPreferida();
         }
         this.formacionPreferida = formacionPreferida;
-        this.formacionPreferida = formacionPreferida;
         listaEntrenador.add(this);
     }
 
     @Override
     public void entrenar() {
-        System.out.println( this.nombre + " esta entrenando con " + equipos);
+        System.out.println( this.getNombre() + " esta entrenando al equipo " + equipos);
     }
 
     @Override
     public void jugarPartido(String rival) {
-        System.out.println( this.nombre + "convoba partido para el fin de semana.");
+        System.out.println("El entrenador " + this.getNombre()+ " está dirigiendo el partido contra " + rival + " con formación " + this.formacionPreferida);
     }
 
     @Override
     public void concentrarse() {
-        System.out.println(this.nombre + " esta concentrado con " + equipos);
+        System.out.println("El entrenador " + this.getNombre() + " esta en concentración con el equipo de " + equipos);
     }
 
     @Override
     public void viajar(String ciudad) {
-        System.out.println(this.nombre + " viaja a con " + equipos + " a " + ciudad);
+        System.out.println("El entrenador " + this.getNombre() + " viaja con su equipo " + equipos + " para el partido que se celebra en " + ciudad);
     }
 
     @Override
     public void celebrarGol() {
-        System.out.println(this.nombre + " corre por la bana gritando ¡GOOOL!");
+        System.out.println("¡GOOOOOOOOOOOL! "+ this.getNombre() +" celebra el gol!");
     }
 }
