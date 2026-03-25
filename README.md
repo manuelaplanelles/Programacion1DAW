@@ -12,11 +12,11 @@ El código evoluciona de ejercicios estructurados a proyectos con arquitectura d
 
 | Carpeta | Contenido |
 |---------|-----------|
-| [Fundamentos](./Fundamentos) | Control de flujo, tipos de datos, estructuras básicas |
-| [Modular](./Modular) | Métodos, paso de parámetros, separación de responsabilidades |
-| [POO](./POO) | Clases, objetos, herencia, polimorfismo, excepciones |
-| [Collection](./Collection) | ArrayList, HashMap y otras colecciones de Java |
-| [Practicas](./Practicas/README.md) | Ejercicios y proyectos entregables (P01–P16) |
+| [Fundamentos](https://github.com/manuelaplanelles/Programacion1DAW/tree/main/ProgramacionJava/Fundamentos/src/main/java/org/example) | Control de flujo, tipos de datos, estructuras básicas |
+| [Modular](https://github.com/manuelaplanelles/Programacion1DAW/tree/main/ProgramacionJava/Modular/src/main/java/org/example) | Métodos, paso de parámetros, separación de responsabilidades |
+| [POO](https://github.com/manuelaplanelles/Programacion1DAW/tree/main/ProgramacionJava/POO/src/main/java/org/example) | Clases, objetos, herencia, polimorfismo, excepciones |
+| [Collection](https://github.com/manuelaplanelles/Programacion1DAW/tree/main/ProgramacionJava/Collection/src/main/java/org/example) | ArrayList, HashMap y otras colecciones de Java |
+| [Practicas](https://github.com/manuelaplanelles/Programacion1DAW/tree/main/ProgramacionJava/Practicas) | Ejercicios y proyectos entregables (P01–P16) |
 
 ---
 
