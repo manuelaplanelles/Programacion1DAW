@@ -25,7 +25,6 @@ public class AppZonaClientes {
             for (Cliente clienteActual : clientes) {
                 if (clienteActual.getUsuario().equals(usuarioIntroducido) && clienteActual.getContrasenya().equals(contrasenyaIntroducido)) {
                     encontrado= true;
-                    iniciarCompra();
                     cliente=clienteActual;
                 }
             }
@@ -42,7 +41,7 @@ public class AppZonaClientes {
         }
     }
     static public void iniciarCompra(){
-
+        
     }
     static public void imprimirProductos(){
 

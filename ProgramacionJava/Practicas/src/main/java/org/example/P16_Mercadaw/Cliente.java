@@ -1,5 +1,7 @@
 package org.example.P16_Mercadaw;
 
+import static org.example.P16_Mercadaw.AppZonaClientes.imprimirProductos;
+
 public class Cliente {
     private String usuario;
     private String contrasenya;
@@ -17,23 +19,27 @@ public class Cliente {
         this.pedido = new Pedido();
     }
     public void insertarProducto(String nombreProducto){
-        /*try{
+        //--
+        try {
             Producto producto = Producto.valueOf(nombreProducto.toUpperCase());
-            if (pedido.getPedido().containsKey(producto)){
+            if (pedido.getPedido().containsKey(producto)) {
                 pedido.getPedido().put(producto, pedido.getPedido().get(producto) + 1);
-            }else{
+            } else {
                 pedido.getPedido().put(producto, 1);
             }
-        }catch(IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             System.out.println("El producto no existe! Elige otro.");
-        }*/
+            imprimirProductos();
+        }
     }
     public double importePedido(){
+        //--
         double total = 0;
-        /*for (java.util.Map.Entry<Producto, Integer> entry : pedido.getPedido().entrySet()) {
+        for (java.util.Map.Entry<Producto, Integer> entry : pedido.getPedido().entrySet()) {
             total += entry.getKey().getPrecio() * entry.getValue();
-        }*/
+        }
         return total;
+
     }
 
     public String getUsuario() {
