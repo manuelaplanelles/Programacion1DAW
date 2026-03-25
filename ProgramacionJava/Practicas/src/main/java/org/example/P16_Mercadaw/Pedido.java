@@ -33,12 +33,12 @@ public class Pedido {
     }
 
     public void mostrarResumen() {
-        System.out.println("RESUMEN DE TU CARRITO DE LA COMPRA:");
+        /*System.out.println("RESUMEN DE TU CARRITO DE LA COMPRA:");
         System.out.println("Productos:");
         for (Map.Entry<Producto, Integer> entry : pedido.entrySet()) {
             System.out.println(entry.getValue() + " " + entry.getKey() + "\t" + entry.getKey().getPrecio());
         }
-        System.out.printf("IMPORTE TOTAL: %.2f€%n", importe_total);
+        System.out.printf("IMPORTE TOTAL: %.2f€%n", importe_total);*/
     }
     public void mostrarResumenOrdenado() {
         System.out.println("RESUMEN DE TU CARRITO DE LA COMPRA:");

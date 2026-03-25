@@ -12,7 +12,7 @@ public class Mercadaw {
     }
 
     public static void generarClientes() {
-        String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        /*String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         Random random = new Random();
         for (int i = 0; i < 3; i++) {
             StringBuilder usuario = new StringBuilder();
@@ -22,7 +22,7 @@ public class Mercadaw {
                 contrasenya.append(caracteres.charAt(random.nextInt(caracteres.length())));
             }
             clientes.add(new Cliente(usuario.toString(),contrasenya.toString()));
-        }
+        }*/
     }
 
     public static List<Cliente> getClientes() {

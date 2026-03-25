@@ -17,7 +17,7 @@ public class Cliente {
         this.pedido = new Pedido();
     }
     public void insertarProducto(String nombreProducto){
-        try{
+        /*try{
             Producto producto = Producto.valueOf(nombreProducto.toUpperCase());
             if (pedido.getPedido().containsKey(producto)){
                 pedido.getPedido().put(producto, pedido.getPedido().get(producto) + 1);
@@ -26,13 +26,13 @@ public class Cliente {
             }
         }catch(IllegalArgumentException e){
             System.out.println("El producto no existe! Elige otro.");
-        }
+        }*/
     }
     public double importePedido(){
         double total = 0;
-        for (java.util.Map.Entry<Producto, Integer> entry : pedido.getPedido().entrySet()) {
+        /*for (java.util.Map.Entry<Producto, Integer> entry : pedido.getPedido().entrySet()) {
             total += entry.getKey().getPrecio() * entry.getValue();
-        }
+        }*/
         return total;
     }
 
