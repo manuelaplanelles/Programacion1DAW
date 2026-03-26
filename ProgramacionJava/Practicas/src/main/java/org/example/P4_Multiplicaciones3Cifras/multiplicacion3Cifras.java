@@ -4,13 +4,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class multiplicacion3Cifras {
-
     static Scanner teclado = new Scanner(System.in);
-
     public static void main(String[] args) {
         menu();
     }
-
     public static void menu() {
         int num1 = leerNumero("Introduce el multiplicando (3 cifras): ");
         int num2 = leerNumero("Introduce el multiplicador (3 cifras): ");
@@ -20,11 +17,9 @@ public class multiplicacion3Cifras {
         System.out.println("_____");
         System.out.println(multiplicacion(num1, num2));
     }
-
     public static int leerNumero(String mensaje) {
         int num = 0;
         boolean valido = false;
-
         do {
             try {
                 System.out.println(mensaje);
@@ -41,14 +36,11 @@ public class multiplicacion3Cifras {
                 teclado.next();
             }
         } while (!valido);
-
         return num;
     }
-
     public static int multiplicacion(int num1, int num2) {
         return num1 * num2;
     }
-
     public static void proceso(int num1, int num2) {
         String numStr = Integer.toString(num2);
 
