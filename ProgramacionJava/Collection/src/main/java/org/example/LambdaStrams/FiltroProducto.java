@@ -7,6 +7,6 @@ import java.util.ListIterator;
 
 @FunctionalInterface
 public interface FiltroProducto {
-    boolean filtrar(FiltroProducto producto);
-
+        boolean filtrar(Producto producto);
 }
+

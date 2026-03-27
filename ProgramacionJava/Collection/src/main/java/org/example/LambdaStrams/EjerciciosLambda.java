@@ -24,10 +24,9 @@ public class EjerciciosLambda {
         System.out.println("Probando Maria con 14 años... " + verificador.puedeVotar("Maria", 14));
 
         //ejercicio3
-        String nombre;
-        double precio;
-        String categoria;
-        List<FiltroProducto> productos = new ArrayList<>();
+        List<Producto> productos = new ArrayList<>();
+        productos.add(new Producto("Smartphone", 150.0, "Electrónica"));
+        
 
 
 
