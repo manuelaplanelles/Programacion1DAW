@@ -26,7 +26,7 @@ public class EjerciciosLambda {
         //ejercicio3
         List<Producto> productos = new ArrayList<>();
         productos.add(new Producto("Smartphone", 150.0, "Electrónica"));
-        
+
 
 
 
