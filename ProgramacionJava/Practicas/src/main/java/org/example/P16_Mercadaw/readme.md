@@ -18,7 +18,6 @@
      - [3.1.4. Clase Mercadaw](#clase-mercadaw)
      - [3.1.5. Clase AppZonaClientes](#clase-appzonaclientes)
 4. [Ejemplo de funcionamiento](#4-ejemplo-de-funcionamiento)
-5. [Conclusión](#5-conclusión)
 
 ---
 
@@ -213,45 +212,5 @@ El menú final con las opciones [1], [2], [3] se gestiona con un `switch` dentro
 
 Al arrancar el programa se imprimen los clientes generados aleatoriamente para poder hacer las pruebas. Luego se pide usuario y contraseña:
 
-```
-Usuario creado: xKpL2mQr
-Contraseña creada: AbCd1234
-
-*** COMPRA ONLINE DE MERCADAW ***
-Usuario: xKpL2mQr
-Contraseña: AbCd1234
-
-BIENVENID@ xKpL2mQr!
-Añade productos a tu carrito de la compra...
-MANZANAS precio (2.30€),
-PAN precio (1.00€),
-...
-Elige un producto: PASTA
-
-Has añadido PASTA con un precio de 0.89€. Importe total del carrito: 0.89€.
-¿Quieres añadir mas productos a tu carrito de la compra? [S/N]: N
-
-RESUMEN DE TU CARRITO DE LA COMPRA:
-Productos:
-1 PASTA 0.89
-IMPORTE TOTAL: 0.89€
-
-¿QUE DESEA HACER?
-[1]. Aplicar promo.
-[2]. Mostrar resumen ordenado por uds.
-[3]. Terminar pedido.
-```
 
 Si el producto no existe se informa y se vuelve a mostrar la lista. Si se elige la opción 3 se muestra la despedida con la dirección del cliente.
-
----
-
-## 5. Conclusión
-
-Esta práctica me ha servido para entender mejor cómo funciona el `HashMap` en un caso real. Lo más complicado fue gestionar el flujo del menú de compra y el control de intentos en la autenticación.
-
-También me costó entender cómo funcionaba `Producto.valueOf()` para convertir el String que introduce el usuario al enum, pero es la forma más directa de hacerlo.
-
-En general la práctica me ha ayudado a ver cómo se conectan las clases entre sí siguiendo un diagrama.
-
----
