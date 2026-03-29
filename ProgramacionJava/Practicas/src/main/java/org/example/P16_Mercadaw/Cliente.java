@@ -1,4 +1,4 @@
-package org.example.P16_Mercadaw;
+package org.example;
 
 import static org.example.P16_Mercadaw.AppZonaClientes.imprimirProductos;
 

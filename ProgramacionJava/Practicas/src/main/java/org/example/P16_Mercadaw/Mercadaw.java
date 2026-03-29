@@ -1,4 +1,4 @@
-package org.example.P16_Mercadaw;
+package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
