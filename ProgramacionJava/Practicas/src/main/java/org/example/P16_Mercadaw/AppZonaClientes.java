@@ -1,4 +1,6 @@
-package org.example;
+package org.example.P16_Mercadaw;
+
+import org.example.P16_Mercadaw.Mercadaw;
 
 import java.util.List;
 import java.util.Scanner;

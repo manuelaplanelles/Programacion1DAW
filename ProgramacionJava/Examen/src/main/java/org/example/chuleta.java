@@ -870,7 +870,7 @@ public class chuleta {
 
         int opcionMenu;
         do {
-            System.out.println("\n--- MENÚ ---");
+            System.out.println("--- MENÚ ---");
             System.out.println("1. Opción A");
             System.out.println("2. Opción B");
             System.out.println("3. Salir");
