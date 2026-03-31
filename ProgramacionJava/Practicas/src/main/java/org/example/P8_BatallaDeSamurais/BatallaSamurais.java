@@ -3,7 +3,7 @@ package org.example.P8_BatallaDeSamurais;
 import java.util.Scanner;
 import java.util.Random;
 
-public class batallaSamurais {
+public class BatallaSamurais {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);

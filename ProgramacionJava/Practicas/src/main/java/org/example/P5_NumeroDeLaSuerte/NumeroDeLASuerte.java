@@ -2,7 +2,7 @@ package org.example.P5_NumeroDeLaSuerte;
 
 import java.util.Scanner;
 
-public class numeroDeLASuerte {
+public class NumeroDeLASuerte {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce tu fecha de nacimiento (dd/mm/aaaa)");

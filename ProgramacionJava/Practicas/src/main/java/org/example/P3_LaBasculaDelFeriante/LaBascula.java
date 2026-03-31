@@ -1,7 +1,7 @@
 package org.example.P3_LaBasculaDelFeriante;
 import java.util.Scanner;
 
-public class laBascula {
+public class LaBascula {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
            System.out.println("*** BIENVENIDO AL RATÓN JUGUETÓN ***");

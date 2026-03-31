@@ -3,7 +3,7 @@ package org.example.P6_CalculadoraSimple;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class calculadoraSimple {
+public class CalculadoraSimple {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         String operacion = "";

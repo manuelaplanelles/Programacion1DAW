@@ -3,7 +3,7 @@ package org.example.P4_Multiplicaciones3Cifras;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class multiplicacion3Cifras {
+public class Multiplicacion3Cifras {
     static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args) {
         menu();

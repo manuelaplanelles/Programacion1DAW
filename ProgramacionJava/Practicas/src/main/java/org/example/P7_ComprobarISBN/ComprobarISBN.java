@@ -2,7 +2,7 @@ package org.example.P7_ComprobarISBN;
 
 import java.util.Scanner;
 
-public class comprobarISBN {
+public class ComprobarISBN {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduzca ISBN: ");
