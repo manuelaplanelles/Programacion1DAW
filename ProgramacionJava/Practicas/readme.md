@@ -17,7 +17,7 @@ Ejercicios y proyectos del curso ordenados por entrega.
 | P08 | [Batalla de Samuráis](./src/main/java/org/example/P8_BatallaDeSamurais) | Lógica de simulación, Random |
 | P09 | [Simulación Sorteo](./src/main/java/org/example/P9_SimulacionSorteo) | Arrays, generación aleatoria |
 | P10 | [XZ Spectrum](./src/main/java/org/example/P10_XZSpectrum) | Arrays, matrices |
-| P11 | [El Formiguero y la Rebelión](./src/main/java/org/example/P11_ElFormigueroYlaRebelion) | Primeras clases, POO básica |
+| P11 | [El Formiguero y la Rebelión](./src/main/java/org/example/P11_ElFormigueroYLaRebelion) | Primeras clases, POO básica |
 | P12 | [PlantUML](./src/main/java/org/example/P12_PlantUML) | Diagramas UML de clases |
 | P13 | [Lombok Instituto](./src/main/java/org/example/P13_LombokInstituto) | Lombok, Maven, equals/hashCode |
 | P14 | [Sistema Pago E-Commerce](./src/main/java/org/example/P14_SistemaPagoECommerce) | Interfaces, polimorfismo |
