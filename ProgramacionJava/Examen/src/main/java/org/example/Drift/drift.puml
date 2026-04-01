@@ -1,0 +1,63 @@
+@startuml
+
+enum CategoriaDrift {
+    STREET(50.0)
+    PRO(150.0)
+    HYPER_DRIFT(300.0)
+}
+
+enum EstadoCoche {
+    PENDIENTE
+    REVISADO
+    APTO
+    NO_APTO
+}
+
+abstract class Participante {
+    -nombre : String
+    -pais : String
+}
+
+class Piloto {
+    -marca : String
+    -estado : EstadoCoche
+    -puntuacion : int
+    +inscribirse() : Inscripcion
+    +pagarInscripcion(inscripcion : Inscripcion) : void
+}
+
+class Mecanico {
+    -piloto : Piloto
+    +revisarVehiculo() : void
+}
+
+class Juez {
+    +validarCocheApto(piloto : Piloto) : void
+}
+
+class Inscripcion {
+    -piloto : Piloto
+    -categoria : CategoriaDrift
+    -pagado : boolean
+}
+
+interface AccionesCarrera {
+    +validarInscripciones(inscripcion : Inscripcion)) : void
+    +darSalida() : void
+    +puntuar(piloto : Piloto) : void
+}
+
+class DriftSpainSeriesApp {
+    +static pilotosInscritos : ArrayList<Inscripcion>
+    +static verGanador(CategoriaDrift categoria) : void
+}
+
+Participante <|-- Piloto
+Participante <|-- Mecanico
+Participante <|-- Juez
+AccionesCarrera <|.. Juez
+Inscripcion o--> Piloto
+Mecanico  o-->  Piloto
+
+
+@enduml
