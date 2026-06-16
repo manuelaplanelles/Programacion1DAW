@@ -1,4 +1,4 @@
-package org.example.App;
+package org.example.Explicaciones.App;
 
 public abstract class Elemento {
     private String id;

@@ -1,4 +1,4 @@
-package org.example.App;
+package org.example.Explicaciones.App;
 
 public class ElementoTipoB extends Elemento implements Accion{
     private int valor;

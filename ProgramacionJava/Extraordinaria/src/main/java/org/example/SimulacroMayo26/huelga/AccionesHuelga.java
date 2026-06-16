@@ -1,4 +1,4 @@
-package org.example.Simulacro26;
+package org.example.SimulacroMayo26.huelga;
 
 public interface AccionesHuelga {
     void secundar();

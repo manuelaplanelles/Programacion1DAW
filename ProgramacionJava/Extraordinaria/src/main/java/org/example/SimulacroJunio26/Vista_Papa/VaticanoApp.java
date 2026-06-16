@@ -1,6 +1,5 @@
-package org.example.SimulacroJunio25.Vista_Papa;
+package org.example.SimulacroJunio26.Vista_Papa;
 
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package org.example.App;
+package org.example.Explicaciones.App;
 
 public class ElementoTipoA extends Elemento {
     private String datoExtra;

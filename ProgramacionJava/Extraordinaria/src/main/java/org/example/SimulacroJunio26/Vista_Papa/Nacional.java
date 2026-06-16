@@ -1,4 +1,4 @@
-package org.example.SimulacroJunio25.Vista_Papa;
+package org.example.SimulacroJunio26.Vista_Papa;
 
 public class Nacional extends Peregrino {
     private String provincia;
