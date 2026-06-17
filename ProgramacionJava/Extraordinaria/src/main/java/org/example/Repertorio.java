@@ -207,9 +207,8 @@ public class Repertorio {
             return null;                               // FUERA del for
         }
 
-
-        // ===========================================================
-// [P4] BUSCAR + DECIDIR (buscar busca, este decide y avisa)
+// ===========================================================
+// [P3B] BUSCAR + DECIDIR (buscar busca, este decide y avisa)
 // CUÁNDO: "si existe muestra X y devuelve, si no muestra Y"
 // ===========================================================
         static Peregrino validacion() {
@@ -225,9 +224,8 @@ public class Repertorio {
             }
         }
 
-
-        // ===========================================================
-// [P5] CAMBIAR estado / POLIMORFISMO
+// ===========================================================
+// [P4] CAMBIAR estado / POLIMORFISMO
 // CUÁNDO: "cambia a X", "cada tipo hace lo suyo" (pagar, leer)
 // ===========================================================
         static void cambiarEstado(Integer id) {
@@ -243,9 +241,8 @@ public class Repertorio {
             }
         }
 
-
-        // ===========================================================
-// [P6] BORRAR con Iterator (mientras recorro)
+// ===========================================================
+// [P5] BORRAR con Iterator (mientras recorro)
 // CUÁNDO: "elimina los que...", "borra los de estado X"
 // ===========================================================
         static void eliminarPorEstado() {
@@ -258,28 +255,8 @@ public class Repertorio {
             }
         }
 
-
-        // ===========================================================
-// [P7] MENÚ que valida e insiste (do-while)
-// CUÁNDO: "insiste hasta que sea válido", "vuelve a pedir"
 // ===========================================================
-        static void menu() {
-            int op;
-            do {
-                System.out.println("1. Alta  2. Buscar  3. Salir");
-                op = VaticanoApp.teclado.nextInt();
-            } while (op < 1 || op > 3);
-
-            // versión texto (SI/NO, FIESTAS/HUELGA):
-            String tipo;
-            do {
-                tipo = VaticanoApp.teclado.next();
-            } while (!tipo.equals("SI") && !tipo.equals("NO"));
-        }
-
-
-        // ===========================================================
-// [P8] EXCEPCIÓN personalizada
+// [P6] EXCEPCIÓN personalizada
 // CUÁNDO: "lanza una excepción", "reporta el error", "si ya existe"
 // ===========================================================
         //1. creamos la clase
@@ -288,7 +265,7 @@ public class Repertorio {
                 super(msg);
             }
         }
-        //2. o bien en una nuevo metodo o en el apartado que necesites introduces el if
+        //2. en el metodo o en el apartado que necesites introduces el if
         static void usarExcepcion(int edad) {
             if (edad > 16) {
                 throw new MiException("Edad no permitida");
@@ -303,9 +280,143 @@ public class Repertorio {
 //            }
         }
 
+// ===========================================================
+// [P7] MENÚS · todas las variantes (elige la que pida el examen)
+// CUÁNDO: "insiste hasta que sea válido", "vuelve a pedir", "menú hasta salir"
+// ===========================================================
+
+        // -------- [P7A] Validar UNA opción e insistir (do-while simple) --------
+        // CUÁNDO: validar una sola opción (NO repite el menú)
+        static void menu7A() {
+            int op;
+            do {
+                System.out.println("1. Alta  2. Buscar  3. Salir");
+                op = VaticanoApp.teclado.nextInt();
+            } while (op < 1 || op > 3);   // repite hasta que introduzca 1, 2 o 3
+
+            // versión TEXTO (SI/NO, FIESTAS/HUELGA):
+            String tipo;
+            do {
+                tipo = VaticanoApp.teclado.next();
+            } while (!tipo.equals("SI") && !tipo.equals("NO"));
+        }
+
+
+        // -------- [P7B] Menú que se REPITE, salir con NÚMERO (0) --------
+        // CUÁNDO: "después de cada acción vuelve a mostrar el menú", salir = opción 0
+        static void menu7B() {
+            int opcion;
+            do {
+                System.out.println("--- MENÚ ---");
+                System.out.println("1. Alta  2. Cobrar  3. Mostrar  0. Salir");
+                opcion = VaticanoApp.teclado.nextInt();
+                switch (opcion) {
+                    case 1: /* altaUsuario(); */ break;
+                    case 2: /* cobrar();      */ break;
+                    case 3: /* mostrarLista();*/ break;
+                    case 0: System.out.println("Saliendo..."); break;
+                    default: System.out.println("Opción no válida.");
+                }
+            } while (opcion != 0);   // vuelve al menú hasta elegir 0
+            // el break del switch NO sale del bucle, solo del switch -> vuelve al menú
+        }
+
+
+        // -------- [P7C] Menú que se REPITE, salir con PALABRA "salir" --------
+        // CUÁNDO: "escribe una opción o 'salir'"
+        // Lee TEXTO (porque "salir" no es número) y convierte con parseInt.
+        static void menu7C() {
+            String entrada;
+            do {
+                System.out.println("--- MENÚ ---");
+                System.out.println("1. Alta usuario");
+                System.out.println("2. Cobrar");
+                System.out.println("Escribe una opción o 'salir':");
+                entrada = VaticanoApp.teclado.nextLine();   // leo TEXTO (puede ser "salir" o "2")
+
+                if (!entrada.equals("salir")) {             // si NO es salir, proceso la opción
+                    try {
+                        int opcion = Integer.parseInt(entrada);   // convierto "2" -> 2
+                        switch (opcion) {
+                            case 1: /* altaUsuario(); */ break;
+                            case 2: /* cobrar();      */ break;
+                            default: System.out.println("Opción no válida.");
+                        }
+                    } catch (NumberFormatException e) {     // si escribe algo que no es número
+                        System.out.println("Entrada no válida. Escribe un número o 'salir'.");
+                    }
+                }
+            } while (!entrada.equals("salir"));   // repite mientras NO escriba "salir"
+            System.out.println("Saliendo del programa...");
+        }
+
+
+        // -------- [P7D] Validar texto SI/NO que insiste (sin menú) --------
+        // CUÁNDO: "responde SI o NO, insiste hasta que sea válido" (referéndum, gratuito S/N)
+        static void menu7D() {
+            String resp;
+            do {
+                System.out.println("¿SÍ o NO? [SI, NO]");
+                resp = VaticanoApp.teclado.next();
+            } while (!resp.equals("SI") && !resp.equals("NO"));
+            // al salir del while ya tengo SI o NO garantizado
+        }
+
+        // ¿CUÁL USO?
+        //  [P7A] validar una opción una vez (no repite menú)
+        //  [P7B] menú que se repite, salir con NÚMERO (0)
+        //  [P7C] menú que se repite, salir con PALABRA "salir" (+ try por si no es número)
+        //  [P7D] validar SI/NO (o FIESTAS/HUELGA) que insiste
 
 // ===========================================================
-// [P9] equals() + hashCode()  (no repetir por un atributo en Set)
+// [P8] ESTADÍSTICA: matriz conteo + porcentaje
+// CUÁNDO: "cuántos hay de cada estado", "porcentaje", "matriz"
+// ===========================================================
+        static void estadisticas() {
+
+            // Creo una matriz de 2 filas y 3 columnas, llena de ceros.
+            // Fila 0 = el CONTEO (cuántos hay de cada estado).
+            // Fila 1 = el PORCENTAJE de cada estado.
+            // 3 columnas = los 3 estados (SOLICITUD_OK, EN_COLA, BENDECIDO).
+            double[][] m = new double[2][3];
+
+            // Recorro TODOS los peregrinos de la lista, uno a uno.
+            for (Peregrino p : VaticanoApp.registrados) {
+
+                // Miro el estado de ESTE peregrino y sumo 1 en su casilla del conteo.
+                switch (p.getEstado()) {
+
+                    case SOLICITUD_OK:
+                        m[0][0]++;   // fila 0 (conteo), columna 0 (SOLICITUD_OK): +1
+                        break;
+
+                    case EN_COLA:
+                        m[0][1]++;   // fila 0 (conteo), columna 1 (EN_COLA): +1
+                        break;
+
+                    case BENDECIDO:
+                        m[0][2]++;   // fila 0 (conteo), columna 2 (BENDECIDO): +1
+                        break;
+                }
+            }
+            // Al terminar el for, la FILA 0 ya tiene cuántos hay de cada estado.
+
+            // Cuento cuántos peregrinos hay en total (para calcular los porcentajes).
+            int total = VaticanoApp.registrados.size();
+
+            // Recorro las 3 columnas para calcular el porcentaje de cada estado.
+            for (int i = 0; i < 3; i++) {
+                // Porcentaje = conteo de esa columna × 100 / total.
+                // Lo guardo en la FILA 1 (la de porcentajes), misma columna.
+                m[1][i] = m[0][i] * 100 / total;
+            }
+            // Al terminar, la FILA 1 tiene el % de cada estado.
+        }
+
+
+
+// ===========================================================
+// [E-1] equals() + hashCode()  (no repetir por un atributo en Set)
 // CUÁNDO: "sin repetir DNI/id" + colección Set
 // PEGA ESTO DENTRO de la clase del objeto (Peregrino/Docente),
 // cambiando el atributo (aquí numReserva).
@@ -315,118 +426,113 @@ public class Repertorio {
 
             @Override
             public boolean equals(Object o) {
+                // Si el objeto que comparo es null, o NO es de la misma clase, no son iguales.
                 if (o == null || getClass() != o.getClass()) return false;
+                // Convierto el Object generico 'o' a mi tipo (EjemploEquals) para poder leer su atributo.
                 EjemploEquals x = (EjemploEquals) o;
+                // Son iguales SOLO si su numReserva coincide. Objects.equals compara sin petar si es null.
                 return Objects.equals(numReserva, x.numReserva);
             }
 
             @Override
             public int hashCode() {
+                // El hashCode se calcula con el MISMO atributo que el equals (numReserva).
+                // equals y hashCode SIEMPRE van juntos y por el mismo atributo.
                 return Objects.hashCode(numReserva);
             }
             // IntelliJ lo genera solo: clic derecho -> Generate -> equals() and hashCode()
         }
 
-
 // ===========================================================
-// [P10] ESTADÍSTICA: matriz conteo + porcentaje
-// CUÁNDO: "cuántos hay de cada estado", "porcentaje", "matriz"
-// ===========================================================
-        static void estadisticas() {
-            double[][] m = new double[2][3];   // fila 0 = conteo, fila 1 = %
-            for (Peregrino p : VaticanoApp.registrados) {
-                switch (p.getEstado()) {
-                    case SOLICITUD_OK:
-                        m[0][0]++;
-                        break;
-                    case EN_COLA:
-                        m[0][1]++;
-                        break;
-                    case BENDECIDO:
-                        m[0][2]++;
-                        break;
-                }
-            }
-            int total = VaticanoApp.registrados.size();
-            for (int i = 0; i < 3; i++) {
-                m[1][i] = m[0][i] * 100 / total;   // % = conteo * 100 / total
-            }
-            // OJO: si piden matriz 3x2 en vez de 2x3, cambia [estado][dato]
-        }
-
-
-// ===========================================================
-// [E-A] FILTRAR por tipo con instanceof
+// [E-2] FILTRAR por tipo con instanceof
 // CUÁNDO: "muestra solo los de tipo X" (lista mezclada)
 // ===========================================================
         static void filtrarPorTipo() {
+            // Recorro toda la lista (que tiene mezclados Nacional, Extranjero...).
             for (Peregrino p : VaticanoApp.registrados) {
+                // instanceof pregunta: ¿este peregrino ES de tipo Nacional?
                 if (p instanceof Nacional) {       // ¿es de este tipo?
+                    // Solo imprimo los que SÍ son Nacional; los demás los ignora.
                     System.out.println(p);
                 }
             }
         }
 
-
 // ===========================================================
-// [E-B] ORDENAR (de mayor a menor con Comparator)
+// [E-3] ORDENAR (de mayor a menor con Comparator)
 // CUÁNDO: "ordenado por X", "de mayor a menor"
 // Comparator en clase aparte (o anónima). .reversed() = invertir
 // ===========================================================
         static class PorReserva implements Comparator<Peregrino> {
             @Override
             public int compare(Peregrino a, Peregrino b) {
+                // Comparo dos peregrinos por su numReserva.
+                // compareTo devuelve: negativo si a<b, 0 si iguales, positivo si a>b.
+                // Eso ordena de MENOR a MAYOR.
                 return a.getNumReserva().compareTo(b.getNumReserva());
             }
         }
 
         static void ordenar() {
+            // Un Set no se puede ordenar directamente, así que lo paso a una List (ArrayList).
             List<Peregrino> lista = new ArrayList<>(VaticanoApp.registrados);
+            // sort() ordena la lista usando mi Comparator: de menor a mayor.
             lista.sort(new PorReserva());              // de menor a mayor
+            // .reversed() le da la vuelta al orden: de MAYOR a menor.
             // lista.sort(new PorReserva().reversed()); // de mayor a menor
         }
 
-
 // ===========================================================
-// [E-C] VALIDAR FORMATO con .matches()
+// [E-4] VALIDAR FORMATO con .matches()
 // CUÁNDO: "valida el formato del DNI/matrícula"
 // ===========================================================
         static boolean validarFormato(String doc) {
+            // matches devuelve true SOLO si TODA la cadena cumple el patrón exacto.
+            // "[0-9]{8}[A-Z]" = 8 dígitos seguidos de 1 letra mayúscula (un DNI).
             return doc.matches("[0-9]{8}[A-Z]");   // 8 números + 1 letra (DNI)
-            // matrícula 1234BCD:  "[0-9]{4}[A-Z]{3}"
+            // matrícula 1234BCD:  "[0-9]{4}[A-Z]{3}"  (4 números + 3 letras)
             // [0-9]=un número, {8}=ocho veces, [A-Z]=una letra mayúscula
         }
 
-
 // ===========================================================
-// [E-D] MAP clave -> valor
+// [E-5] MAP clave -> valor
 // CUÁNDO: "guarda X asociado a Y y accede por la clave"
 // (pueblo->votos, palabra->significado). NO para buscar en lista.
 // ===========================================================
         static void usarMap() {
+            // Map = pares clave->valor. Aquí: nombre de pueblo (String) -> nº votos (Integer).
             Map<String, Integer> votos = new HashMap<>();   // TreeMap si lo quieres ordenado
             String pueblo = "Mutxamel";
+            // getOrDefault(pueblo, 0) = los votos que ya tiene ese pueblo, o 0 si aún no está.
+            // Le sumo 1 y lo vuelvo a guardar con put. Así voy contando votos por pueblo.
             votos.put(pueblo, votos.getOrDefault(pueblo, 0) + 1);  // suma 1
+            // keySet() = todas las claves (los nombres de pueblo). Recorro cada una.
             for (String clave : votos.keySet()) {
+                // get(clave) = el valor (los votos) de ese pueblo.
                 System.out.println(clave + ": " + votos.get(clave));
             }
         }
 
-
 // ===========================================================
-// [E-E] COLA FIFO con poll (atender por orden de llegada)
+// [E-6] COLA FIFO con poll (atender por orden de llegada)
 // CUÁNDO: "el primero que llega es el primero que sale"
 // ===========================================================
         static void atenderPorOrden() {
+            // Una cola (Queue): el primero que entró es el primero que sale (FIFO).
             Queue<Peregrino> fila = VaticanoApp.fila;
+            // offer(p) METE un peregrino al final de la cola.
             // fila.offer(p);  // meter al final
+            // Mientras la cola NO esté vacía, sigo atendiendo.
             while (!fila.isEmpty()) {
+                // poll() SACA el primero de la cola Y lo elimina de ella.
                 Peregrino p = fila.poll();   // saca el primero Y lo quita
+                // Atiendo a ese peregrino (hago lo que toque con él).
                 p.recibirBesico();
             }
         }
+
 // ===========================================================
-// [E-F] ENCAPSULADO · control de dato que INSISTE
+// [E-7] ENCAPSULADO · control de dato que INSISTE
 // CUÁNDO: "controla que no se den de alta con [dato] inválido", "aplica encapsulación"
 // El control va en el SETTER. El constructor debe LLAMAR al setter. (PATRI)
 // ===========================================================
@@ -434,14 +540,18 @@ public class Repertorio {
             private int edad;
 
             public EjemploEncapsulado(int edad) {
+                // El constructor NO hace this.edad = edad directo, sino que LLAMA al setter,
+                // para que la edad pase por el control de validación.
                 setEdad(edad);                // <-- pasa por el control, NO this.edad = edad
             }
             public void setEdad(int edad) {
                 Scanner teclado = new Scanner(System.in);
+                // Mientras la edad sea inválida (negativa), repito: aviso y pido otra.
                 while (edad < 0) {            // mientras sea INVÁLIDO, insiste
                     System.out.println("ERROR. Edad no válida. Introduce la edad:");
-                    edad = teclado.nextInt();
+                    edad = teclado.nextInt();   // leo una edad nueva y vuelvo a comprobar
                 }
+                // Solo llego aquí cuando la edad ya es válida (0 o más): la guardo.
                 this.edad = edad;            // sale del while = ya es válido
             }
             // TRAMPAS:
